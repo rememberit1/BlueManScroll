@@ -1,0 +1,40 @@
+settings =
+{
+	orientation =
+	{
+		default = "landscapeRight",
+		supported = { "landscapeLeft", "landscapeRight" },
+	},
+	android =
+    {   
+        usesExpansionFile = false,
+        versionCode = 15,
+        usesPermissions =
+        {
+                "android.permission.INTERNET",
+                "com.android.vending.CHECK_LICENSE",
+                "com.android.vending.BILLING",
+                "android.permission.WRITE_EXTERNAL_STORAGE"
+        },
+    },
+	
+		plugins =
+	{
+
+        ["plugin.google.iap.v3"] =
+        {
+            publisherId = "com.coronalabs",
+            supportedPlatforms = { android=true }
+        },
+        ["plugin.google.play.services"] =
+        {
+            publisherId = "com.coronalabs"
+        },
+        ["CoronaProvider.native.popup.social"] =
+        {
+            -- required
+            publisherId = "com.coronalabs",
+        },
+    },	
+
+}
